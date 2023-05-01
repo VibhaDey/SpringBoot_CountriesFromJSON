@@ -16,7 +16,6 @@ public class CountriesRepositoryImpl implements ICountriesRepository {
         JSONObject jsonObject = null;
         try {
             FileReader fileReader = new FileReader(".//jsonFile//countries.json");
-            fileReader.read();
             JSONParser jsonParser = new JSONParser();
             jsonObject = (JSONObject) jsonParser.parse(fileReader);
         } catch (FileNotFoundException e) {
@@ -26,8 +25,6 @@ public class CountriesRepositoryImpl implements ICountriesRepository {
         } catch (ParseException e) {
             throw new RuntimeException(e);
         }
-
-
         return jsonObject;
     }
 }
