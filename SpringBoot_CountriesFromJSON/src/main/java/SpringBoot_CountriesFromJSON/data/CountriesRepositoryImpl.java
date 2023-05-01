@@ -3,11 +3,12 @@ package SpringBoot_CountriesFromJSON.data;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.stereotype.Repository;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
+@Repository
 public class CountriesRepositoryImpl implements ICountriesRepository {
     @Override
     public JSONObject readDataFromJson() {
