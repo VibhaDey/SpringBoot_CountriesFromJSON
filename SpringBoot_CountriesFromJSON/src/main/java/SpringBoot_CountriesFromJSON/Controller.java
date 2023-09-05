@@ -19,5 +19,9 @@ public class Controller {
         return iCountryHandler.getCountries();
 
     }
+    @RequestMapping("/hello")
+    public String sayHello(){
+        return "hello";
+    }
 
 }
